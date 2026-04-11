@@ -70,9 +70,9 @@ const Career = () => {
 
           {/* LARGE CERTIFICATES GRID */}
           <div className="certificates-grid">
-            <img src="https://aakashbuild.vercel.app/images/cert-claude-101.jpg" alt="Claude 101" />
-            <img src="https://aakashbuild.vercel.app/images/cert-claude-code.jpg" alt="Claude Code" />
-            <img src="https://aakashbuild.vercel.app/images/cert-ai-fluency.jpg" alt="AI Fluency" />
+            <img src="/images/cert-claude-101.jpg" alt="Claude 101" />
+            <img src="/images/cert-claude-code.jpg" alt="Claude Code" />
+            <img src="/images/cert-ai-fluency.jpg" alt="AI Fluency" />
           </div>
         </div>
       </div>
