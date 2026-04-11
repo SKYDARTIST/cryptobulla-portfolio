@@ -5,7 +5,7 @@ import {
   useEffect,
   useState,
 } from "react";
-import Loading from "../components/Loading";
+import Loading, { setProgress } from "../components/Loading";
 
 interface LoadingType {
   isLoading: boolean;
@@ -16,7 +16,7 @@ interface LoadingType {
 export const LoadingContext = createContext<LoadingType | null>(null);
 
 export const LoadingProvider = ({ children }: PropsWithChildren) => {
-  const [isLoading, setIsLoading] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
   const [loading, setLoading] = useState(0);
 
   const value = {
@@ -24,7 +24,31 @@ export const LoadingProvider = ({ children }: PropsWithChildren) => {
     setIsLoading,
     setLoading,
   };
-  useEffect(() => {}, [loading]);
+
+  useEffect(() => {
+    // Prevent scroll during load
+    document.body.style.overflow = "hidden";
+
+    // Dynamically import setProgress to avoid circular dep
+    import("../components/Loading").then(({ setProgress }) => {
+      const { loaded, clear } = setProgress(setLoading);
+
+      const finish = () => {
+        loaded();
+      };
+
+      if (document.readyState === "complete") {
+        finish();
+      } else {
+        window.addEventListener("load", finish);
+      }
+
+      return () => {
+        window.removeEventListener("load", finish);
+        clear();
+      };
+    });
+  }, []);
 
   return (
     <LoadingContext.Provider value={value as LoadingType}>
