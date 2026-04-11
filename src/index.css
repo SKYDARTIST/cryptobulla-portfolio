@@ -42,8 +42,7 @@ a:hover {
   color: var(--accentColor);
 }
 main {
-  opacity: 1;
-  transition: 0.3s;
+  opacity: 0;
 }
 .main-active {
   opacity: 0;
