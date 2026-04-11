@@ -1,7 +1,5 @@
 import {
   FaGithub,
-  FaInstagram,
-  FaLinkedinIn,
   FaXTwitter,
 } from "react-icons/fa6";
 import "./styles/SocialIcons.css";
@@ -60,28 +58,23 @@ const SocialIcons = () => {
     <div className="icons-section">
       <div className="social-icons" data-cursor="icons" id="social">
         <span>
-          <a href="https://github.com" target="_blank">
+          <a href="https://github.com/SKYDARTIST" target="_blank">
             <FaGithub />
           </a>
         </span>
         <span>
-          <a href="https://www.linkedin.com" target="_blank">
-            <FaLinkedinIn />
-          </a>
-        </span>
-        <span>
-          <a href="https://x.com" target="_blank">
+          <a href="https://x.com/aakash_aum" target="_blank">
             <FaXTwitter />
           </a>
         </span>
-        <span>
-          <a href="https://www.instagram.com" target="_blank">
-            <FaInstagram />
-          </a>
-        </span>
       </div>
-      <a className="resume-button" href="#">
-        <HoverLinks text="RESUME" />
+      <a
+        className="resume-button"
+        href="https://aakashbuild.vercel.app"
+        target="_blank"
+        data-cursor="disable"
+      >
+        <HoverLinks text="PORTFOLIO" />
         <span>
           <TbNotes />
         </span>
