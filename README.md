@@ -1,65 +1,38 @@
-# My Portfolio Website - Overview 🚀
+# Aakash — AI & Mobile Developer Portfolio
 
-This repository contains the open-source version of my personal portfolio website.  
-Feel free to explore the code and use it for learning and inspiration.
+Personal portfolio built to show real shipped products, hard problems solved, and proof of execution speed.
 
----
-
-## ⚠️ Usage Notice
-
-This project is shared for learning purposes only.
-
-Please do NOT:
-- Clone or replicate the full website or design
-- Repost it with minor content changes
-- Use this project for commercial/client work
-- Create tutorials or content using this exact project
-
-If you use parts of the code, you must provide proper credit linking back to the original repository.
-
-Build your own version — don’t just copy.
-
-— Moncy Yohannan
+Live: [aakashbuild.vercel.app](https://aakashbuild.vercel.app)
 
 ---
 
-## 🛠️ Instructions
+## Stack
 
-I have modified the GSAP Club plugins using trial versions.  
-⚠️ Note: Trial plugins cannot be used for production or hosting.
-
-For official GSAP Club plugins, refer here:  
-https://gsap.com/docs/v3/Installation/
+React · TypeScript · GSAP · Three.js · WebGL · Vite · CSS
 
 ---
 
-## ⚙️ Tech Stack
+## Projects Featured
 
-React • TypeScript • GSAP • Three.js • WebGL • HTML • CSS • JavaScript
-
----
-
-## 🎨 Assets Usage
-
-Some 3D assets included in this repository are free to use for learning purposes.
-
-However:
-
-- The original 3D avatar used on my live portfolio is NOT included in this repository
-- That avatar is a custom asset created over ~1 month
-- It is not open source and not available for reuse
-
-Any usage, extraction, or redistribution of that avatar from my live website is strictly prohibited.
+- **Anti-Gravity: Private AI PDF** — Android app, Play Store, 800+ installs, 11 paid sales, 5★
+- **MindMint** — AI study tool (mindmaps, quizzes, flashcards)
+- **CareerPilot AI** — Autonomous job discovery pipeline
+- **SignalVane** — AI narrative detection for Solana
+- **LLM Comparator** — Built in 2 hours during a live technical trial
+- **Drone Management Dashboard** — Built in 48 hours as a timed assessment
 
 ---
 
-![Protfolio-Preview](https://github.com/user-attachments/assets/3c4557e7-6392-4928-b8a9-7b2476ef4edd)
+## Certifications
+
+- Claude 101 — Anthropic Academy
+- Claude Code in Action — Anthropic Academy
+- AI Fluency: Framework & Foundations — Anthropic Academy
 
 ---
 
-## 📄 License
+## Contact
 
-This project is licensed under the Personal Portfolio License (PPL) v1.0.
-
-See the LICENSE file for full details
-
+**Email:** aakashbuildss@gmail.com  
+**X:** [@AakashBuild](https://x.com/AakashBuild)  
+**GitHub:** [SKYDARTIST](https://github.com/SKYDARTIST)
