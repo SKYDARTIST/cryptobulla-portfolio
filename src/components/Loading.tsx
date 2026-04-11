@@ -10,18 +10,24 @@ const Loading = ({ percent }: { percent: number }) => {
   useEffect(() => {
     if (percent < 100) return;
     const t1 = setTimeout(() => setDone(true), 300);
-    const t2 = setTimeout(() => setExiting(true), 800);
-    const t3 = setTimeout(() => {
+    // Fire initialFX while loader is STILL visible — splits text, sets initial GSAP
+    // states, and starts animations underneath the loader. No flash possible since
+    // loader fully covers the main until it starts fading out.
+    const t2 = setTimeout(() => {
       import("./utils/initialFX").then((mod) => {
         if (mod.initialFX) mod.initialFX();
       });
+    }, 700);
+    const t3 = setTimeout(() => setExiting(true), 1000);
+    const t4 = setTimeout(() => {
       setIsLoading(false);
       document.body.style.overflow = "";
-    }, 1500);
+    }, 1700);
     return () => {
       clearTimeout(t1);
       clearTimeout(t2);
       clearTimeout(t3);
+      clearTimeout(t4);
     };
   }, [percent >= 100]);
 
