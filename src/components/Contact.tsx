@@ -1,72 +1,73 @@
 import { MdArrowOutward, MdCopyright } from "react-icons/md";
 import "./styles/Contact.css";
 
+const socials = [
+  { label: "Github", href: "https://github.com/SKYDARTIST" },
+  { label: "Twitter / X", href: "https://x.com/AakashBuild" },
+  {
+    label: "Play Store",
+    href: "https://play.google.com/store/apps/details?id=com.cryptobulla.antigravity",
+  },
+];
+
 const Contact = () => {
   return (
-    <div className="contact-section section-container" id="contact">
-      <div className="contact-container">
-        <h3>Contact</h3>
-        <div className="contact-flex">
-          <div className="contact-box">
-            <h4>Email</h4>
-            <p>
-              <a href="mailto:example@mail.com" data-cursor="disable">
-                example@mail.com
-              </a>
-            </p>
-            <h4>Phone</h4>
-            <p>
-              <a href="tel:+9199999999" data-cursor="disable">
-                +91 99999 99999
-              </a>
-            </p>
+    <section className="contact-section" id="contact">
+      <div className="contact-inner">
+        <span className="contact-badge">
+          <span className="contact-badge__dot" />
+          Available for internships
+        </span>
+
+        <h2 className="contact-statement">
+          Let's build <br />
+          something <span>real.</span>
+        </h2>
+
+        <a
+          href="mailto:aakashbuildss@gmail.com"
+          className="contact-cta"
+          data-cursor="disable"
+        >
+          aakashbuildss@gmail.com
+          <MdArrowOutward />
+        </a>
+
+        <div className="contact-grid">
+          <div className="contact-col">
+            <h4>Available for</h4>
+            <p>AI integrations · Mobile apps · Freelance projects</p>
           </div>
-          <div className="contact-box">
-            <h4>Social</h4>
-            <a
-              href="https://github.com"
-              target="_blank"
-              data-cursor="disable"
-              className="contact-social"
-            >
-              Github <MdArrowOutward />
-            </a>
-            <a
-              href="https://www.linkedin.com"
-              target="_blank"
-              data-cursor="disable"
-              className="contact-social"
-            >
-              Linkedin <MdArrowOutward />
-            </a>
-            <a
-              href="https://x.com"
-              target="_blank"
-              data-cursor="disable"
-              className="contact-social"
-            >
-              Twitter <MdArrowOutward />
-            </a>
-            <a
-              href="https://www.instagram.com"
-              target="_blank"
-              data-cursor="disable"
-              className="contact-social"
-            >
-              Instagram <MdArrowOutward />
-            </a>
-          </div>
-          <div className="contact-box">
-            <h2>
-              Designed and Developed <br /> by <span>Moncy Yohannan</span>
-            </h2>
-            <h5>
-              <MdCopyright /> 2024
-            </h5>
+
+          <div className="contact-col">
+            <h4>Find me on</h4>
+            <div className="contact-socials">
+              {socials.map((s) => (
+                <a
+                  key={s.label}
+                  href={s.href}
+                  target="_blank"
+                  rel="noreferrer"
+                  data-cursor="disable"
+                  className="contact-social"
+                >
+                  {s.label} <MdArrowOutward />
+                </a>
+              ))}
+            </div>
           </div>
         </div>
+
+        <div className="contact-footer">
+          <span className="contact-sign">
+            Designed and developed by <span>Aakash</span>
+          </span>
+          <span className="contact-copy">
+            <MdCopyright /> 2026
+          </span>
+        </div>
       </div>
-    </div>
+    </section>
   );
 };
 

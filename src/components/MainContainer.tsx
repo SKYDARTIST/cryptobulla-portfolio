@@ -1,16 +1,16 @@
 import { lazy, PropsWithChildren, Suspense, useEffect, useState } from "react";
 import About from "./About";
 import Career from "./Career";
-import Contact from "./Contact";
 import Cursor from "./Cursor";
 import Landing from "./Landing";
 import Navbar from "./Navbar";
 import SocialIcons from "./SocialIcons";
 import WhatIDo from "./WhatIDo";
 import Work from "./Work";
+import Sprints from "./Sprints";
+import TechStack from "./TechStack";
+import Contact from "./Contact";
 import setSplitText from "./utils/splitText";
-
-const TechStack = lazy(() => import("./TechStack"));
 
 const MainContainer = ({ children }: PropsWithChildren) => {
   const [isDesktopView, setIsDesktopView] = useState<boolean>(
@@ -24,8 +24,17 @@ const MainContainer = ({ children }: PropsWithChildren) => {
     };
     resizeHandler();
     window.addEventListener("resize", resizeHandler);
+
+    // Trigger scroll + animations immediately (loading screen is disabled)
+    const timer = setTimeout(() => {
+      import("./utils/initialFX").then((module) => {
+        if (module.initialFX) module.initialFX();
+      });
+    }, 300);
+
     return () => {
       window.removeEventListener("resize", resizeHandler);
+      clearTimeout(timer);
     };
   }, [isDesktopView]);
 
@@ -43,11 +52,8 @@ const MainContainer = ({ children }: PropsWithChildren) => {
             <WhatIDo />
             <Career />
             <Work />
-            {isDesktopView && (
-              <Suspense fallback={<div>Loading....</div>}>
-                <TechStack />
-              </Suspense>
-            )}
+            <Sprints />
+            <TechStack />
             <Contact />
           </div>
         </div>

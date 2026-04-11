@@ -1,78 +1,137 @@
 import "./styles/Work.css";
-import WorkImage from "./WorkImage";
-import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { useGSAP } from "@gsap/react";
+import { MdArrowOutward } from "react-icons/md";
 
-gsap.registerPlugin(useGSAP);
+type Project = {
+  number: string;
+  name: string;
+  category: string;
+  tools: string;
+  link: string;
+  desc: string;
+  size: "lg" | "md" | "sm";
+  accent?: string;
+  image?: string;
+  gradient?: string;
+};
+
+const projects: Project[] = [
+  {
+    number: "01",
+    name: "Anti-Gravity",
+    category: "Android App / AI",
+    tools: "React · Capacitor · Supabase · Gemini · Play Billing",
+    link: "https://play.google.com/store/apps/details?id=com.cryptobulla.antigravity",
+    desc: "Private AI PDF on the Play Store.",
+    size: "lg",
+    accent: "800+ installs · 11 paid lifetime sales · 5★",
+    image: "/images/work-antigravity.png",
+  },
+  {
+    number: "02",
+    name: "MindMint",
+    category: "Web App / AI",
+    tools: "Next.js · Firebase · Gemini · TypeScript",
+    link: "https://mindmint.study",
+    desc: "AI study tool — text → mindmaps, quizzes, flashcards.",
+    size: "lg",
+    image: "/images/work-mindmint.png",
+  },
+  {
+    number: "03",
+    name: "CareerPilot AI",
+    category: "AI Agent / Automation",
+    tools: "Next.js · n8n · Gemini · Claude API",
+    link: "https://career-pilot-ai-psi.vercel.app/",
+    desc: "Autonomous pipeline: scrapes jobs, filters noise, ranks matches.",
+    size: "md",
+    image: "/images/work-careerpilot.png",
+  },
+  {
+    number: "04",
+    name: "SignalVane",
+    category: "Web3 / Analytics",
+    tools: "Python · Streamlit · Solana",
+    link: "https://solana-narrative-scout.streamlit.app/",
+    desc: "AI narrative detection for the Solana ecosystem.",
+    size: "md",
+    image: "/images/work-signalvane.png",
+  },
+  {
+    number: "05",
+    name: "BasedFolio",
+    category: "Web3 / Farcaster",
+    tools: "Next.js · Farcaster SDK · Base",
+    link: "https://farcaster.xyz/miniapps/4pZg_YnPhRUi/basedfolio",
+    desc: "Onboarding mini-app for the Base ecosystem.",
+    size: "sm",
+    gradient: "linear-gradient(135deg, rgba(0, 82, 255, 0.15) 0%, rgba(0, 180, 255, 0.08) 100%)",
+  },
+  {
+    number: "06",
+    name: "Nexus Dashboard",
+    category: "Analytics / Internal",
+    tools: "React · Supabase · Real-time",
+    link: "#",
+    desc: "Custom admin tool. Found a 100% billing failure bug with it.",
+    size: "sm",
+    gradient: "linear-gradient(135deg, rgba(127, 64, 255, 0.15) 0%, rgba(180, 100, 255, 0.06) 100%)",
+  },
+];
 
 const Work = () => {
-  useGSAP(() => {
-  let translateX: number = 0;
-
-  function setTranslateX() {
-    const box = document.getElementsByClassName("work-box");
-    const rectLeft = document
-      .querySelector(".work-container")!
-      .getBoundingClientRect().left;
-    const rect = box[0].getBoundingClientRect();
-    const parentWidth = box[0].parentElement!.getBoundingClientRect().width;
-    let padding: number =
-      parseInt(window.getComputedStyle(box[0]).padding) / 2;
-    translateX = rect.width * box.length - (rectLeft + parentWidth) + padding;
-  }
-
-  setTranslateX();
-
-  let timeline = gsap.timeline({
-    scrollTrigger: {
-      trigger: ".work-section",
-      start: "top top",
-      end: `+=${translateX}`, // Use actual scroll width
-      scrub: true,
-      pin: true,
-      id: "work",
-    },
-  });
-
-  timeline.to(".work-flex", {
-    x: -translateX,
-    ease: "none",
-  });
-
-  // Clean up (optional, good practice)
-  return () => {
-    timeline.kill();
-    ScrollTrigger.getById("work")?.kill();
-  };
-}, []);
   return (
-    <div className="work-section" id="work">
+    <section className="work-section" id="work">
       <div className="work-container section-container">
         <h2>
           My <span>Work</span>
         </h2>
-        <div className="work-flex">
-          {[...Array(6)].map((_value, index) => (
-            <div className="work-box" key={index}>
-              <div className="work-info">
-                <div className="work-title">
-                  <h3>0{index + 1}</h3>
+        <p className="work-subtitle">
+          Shipped projects. Real users. Real revenue.
+        </p>
 
-                  <div>
-                    <h4>Project Name</h4>
-                    <p>Category</p>
-                  </div>
+        <div className="work-bento">
+          {projects.map((project) => (
+            <a
+              key={project.number}
+              href={project.link}
+              target={project.link === "#" ? undefined : "_blank"}
+              rel="noreferrer"
+              data-cursor="disable"
+              className={`work-card work-card--${project.size}`}
+              style={project.gradient ? { background: project.gradient } : undefined}
+            >
+              {project.image && (
+                <div className="work-card__img-wrap">
+                  <img
+                    src={project.image}
+                    alt={project.name}
+                    className="work-card__img"
+                  />
                 </div>
-                <h4>Tools and features</h4>
-                <p>Javascript, TypeScript, React, Threejs</p>
+              )}
+
+              <div className="work-card__content">
+                <div className="work-card__top">
+                  <span className="work-card__num">{project.number}</span>
+                  <MdArrowOutward className="work-card__arrow" />
+                </div>
+
+                <div className="work-card__body">
+                  <h3 className="work-card__name">{project.name}</h3>
+                  <p className="work-card__category">{project.category}</p>
+                  <p className="work-card__desc">{project.desc}</p>
+                  {project.accent && (
+                    <p className="work-card__accent">{project.accent}</p>
+                  )}
+                </div>
+
+                <p className="work-card__tools">{project.tools}</p>
               </div>
-              <WorkImage image="/images/placeholder.webp" alt="" />
-            </div>
+            </a>
           ))}
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

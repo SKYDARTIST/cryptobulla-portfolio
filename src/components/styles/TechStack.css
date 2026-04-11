@@ -1,0 +1,164 @@
+.tech-section {
+  width: 100%;
+  padding: 120px 0;
+  margin-bottom: 160px;
+  background-color: transparent;
+  position: relative;
+  z-index: 20;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.tech-intro {
+  max-width: 1600px;
+  margin: 0 auto 60px;
+  padding: 0 50px;
+}
+
+.tech-intro h2 {
+  font-size: 70px;
+  font-weight: 500;
+  line-height: 1;
+  margin: 0;
+  color: #f4f4f5;
+}
+
+.tech-intro h2 > span {
+  color: var(--accentColor);
+}
+
+.tech-intro p {
+  color: #a1a1aa;
+  font-size: 18px;
+  margin-top: 18px;
+  letter-spacing: 0.3px;
+}
+
+/* MARQUEE */
+.tech-marquee {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  position: relative;
+}
+
+.tech-marquee::before,
+.tech-marquee::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 180px;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.tech-marquee::before {
+  left: 0;
+  background: linear-gradient(
+    to right,
+    var(--backgroundColor),
+    transparent
+  );
+}
+
+.tech-marquee::after {
+  right: 0;
+  background: linear-gradient(
+    to left,
+    var(--backgroundColor),
+    transparent
+  );
+}
+
+.tech-marquee__track {
+  display: flex;
+  gap: 16px;
+  width: max-content;
+  will-change: transform;
+}
+
+.tech-marquee__track--ltr {
+  animation: marquee-ltr 40s linear infinite;
+}
+
+.tech-marquee__track--rtl {
+  animation: marquee-rtl 45s linear infinite;
+}
+
+@keyframes marquee-ltr {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes marquee-rtl {
+  from {
+    transform: translateX(-50%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+/* CHIPS */
+.tech-chip {
+  flex-shrink: 0;
+  padding: 18px 36px;
+  font-size: 18px;
+  font-weight: 400;
+  color: #f4f4f5;
+  background: rgba(11, 8, 12, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+  border-radius: 12px;
+  letter-spacing: 0.5px;
+  font-family: "Geist", sans-serif;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  white-space: nowrap;
+}
+
+.tech-chip--alt {
+  background: rgba(127, 64, 255, 0.08);
+  border-color: rgba(180, 100, 255, 0.25);
+  color: #e9d5ff;
+}
+
+/* Pause on hover */
+.tech-marquee:hover .tech-marquee__track {
+  animation-play-state: paused;
+}
+
+@media only screen and (max-width: 1024px) {
+  .tech-intro h2 {
+    font-size: 50px;
+  }
+  .tech-chip {
+    padding: 14px 26px;
+    font-size: 15px;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .tech-section {
+    padding: 80px 0;
+  }
+  .tech-intro {
+    padding: 0 24px;
+    margin-bottom: 40px;
+  }
+  .tech-intro h2 {
+    font-size: 40px;
+  }
+  .tech-intro p {
+    font-size: 15px;
+  }
+  .tech-marquee::before,
+  .tech-marquee::after {
+    width: 80px;
+  }
+}
