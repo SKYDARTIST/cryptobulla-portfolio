@@ -22,7 +22,7 @@ const About = () => {
               textDecoration: "none",
             }}
           >
-            Anti-Gravity: Private AI PDF
+            PDF Editor & AI: Anti-Gravity
           </a>
           , is live on the Play Store. Built solo using React, Capacitor,
           Supabase, and Gemini API. Currently sitting at 800+ installs, 11 paid
