@@ -26,28 +26,24 @@ export const LoadingProvider = ({ children }: PropsWithChildren) => {
   };
 
   useEffect(() => {
-    // Prevent scroll during load
     document.body.style.overflow = "hidden";
 
-    // Dynamically import setProgress to avoid circular dep
-    import("../components/Loading").then(({ setProgress }) => {
-      const { loaded, clear } = setProgress(setLoading);
+    const { loaded, clear } = setProgress(setLoading);
 
-      const finish = () => {
-        loaded();
-      };
+    const finish = () => {
+      loaded();
+    };
 
-      if (document.readyState === "complete") {
-        finish();
-      } else {
-        window.addEventListener("load", finish);
-      }
+    if (document.readyState === "complete") {
+      finish();
+    } else {
+      window.addEventListener("load", finish);
+    }
 
-      return () => {
-        window.removeEventListener("load", finish);
-        clear();
-      };
-    });
+    return () => {
+      window.removeEventListener("load", finish);
+      clear();
+    };
   }, []);
 
   return (
