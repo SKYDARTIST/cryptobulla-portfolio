@@ -14,6 +14,7 @@ const Loading = ({ percent }: { percent: number }) => {
     // states, and starts animations underneath the loader. No flash possible since
     // loader fully covers the main until it starts fading out.
     const t2 = setTimeout(() => {
+      document.body.style.overflow = "";
       import("./utils/initialFX").then((mod) => {
         if (mod.initialFX) mod.initialFX();
       });
@@ -21,7 +22,6 @@ const Loading = ({ percent }: { percent: number }) => {
     const t3 = setTimeout(() => setExiting(true), 1000);
     const t4 = setTimeout(() => {
       setIsLoading(false);
-      document.body.style.overflow = "";
     }, 1700);
     return () => {
       clearTimeout(t1);
