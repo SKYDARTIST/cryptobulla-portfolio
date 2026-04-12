@@ -11,6 +11,7 @@ const Career = () => {
     { src: "/images/cert-claude-101.jpg", alt: "Claude 101" },
     { src: "/images/cert-claude-code.jpg", alt: "Claude Code in Action" },
     { src: "/images/cert-ai-fluency.jpg", alt: "AI Fluency: Framework & Foundations" },
+    { src: "/images/cert-ai-capabilities.jpg", alt: "AI Capabilities & Limitations" },
   ];
 
   const visibleCerts = showAll ? allCerts : allCerts.slice(0, 3);
