@@ -263,19 +263,21 @@
 }
 
 .view-all-btn {
-  background: transparent;
-  border: 1px solid rgba(255, 255, 255, 0.25);
-  color: rgba(255, 255, 255, 0.7);
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  color: #fff;
   font-family: inherit;
-  font-size: 0.85rem;
+  font-size: 0.9rem;
+  font-weight: 600;
   letter-spacing: 0.05em;
-  padding: 0.6rem 1.5rem;
+  padding: 0.75rem 2rem;
   cursor: pointer;
-  border-radius: 4px;
-  transition: border-color 0.2s, color 0.2s;
+  border-radius: 6px;
+  transition: background 0.2s, border-color 0.2s, box-shadow 0.2s;
 }
 
 .view-all-btn:hover {
-  border-color: rgba(180, 100, 255, 0.6);
-  color: #fff;
+  background: rgba(180, 100, 255, 0.2);
+  border-color: rgba(180, 100, 255, 0.8);
+  box-shadow: 0 0 20px rgba(180, 100, 255, 0.3);
 }
