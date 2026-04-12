@@ -6,6 +6,8 @@ const Career = () => {
 
   const allCerts = [
     { src: "/images/cert-building-with-claude.jpg", alt: "Building with the Claude API" },
+    { src: "/images/cert-claude-code-101.jpg", alt: "Claude Code 101" },
+    { src: "/images/cert-cowork.jpg", alt: "Introduction to Cowork" },
     { src: "/images/cert-claude-101.jpg", alt: "Claude 101" },
     { src: "/images/cert-claude-code.jpg", alt: "Claude Code in Action" },
     { src: "/images/cert-ai-fluency.jpg", alt: "AI Fluency: Framework & Foundations" },
