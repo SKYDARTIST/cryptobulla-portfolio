@@ -255,3 +255,27 @@
   transform: scale(1.05) translateY(-5px);
   box-shadow: 0 15px 50px rgba(180, 100, 255, 0.4);
 }
+
+.certificates-view-all {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.view-all-btn {
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  color: rgba(255, 255, 255, 0.7);
+  font-family: inherit;
+  font-size: 0.85rem;
+  letter-spacing: 0.05em;
+  padding: 0.6rem 1.5rem;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: border-color 0.2s, color 0.2s;
+}
+
+.view-all-btn:hover {
+  border-color: rgba(180, 100, 255, 0.6);
+  color: #fff;
+}

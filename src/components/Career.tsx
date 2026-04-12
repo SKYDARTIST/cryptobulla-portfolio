@@ -1,6 +1,18 @@
+import { useState } from "react";
 import "./styles/Career.css";
 
 const Career = () => {
+  const [showAll, setShowAll] = useState(false);
+
+  const allCerts = [
+    { src: "/images/cert-building-with-claude.jpg", alt: "Building with the Claude API" },
+    { src: "/images/cert-claude-101.jpg", alt: "Claude 101" },
+    { src: "/images/cert-claude-code.jpg", alt: "Claude Code in Action" },
+    { src: "/images/cert-ai-fluency.jpg", alt: "AI Fluency: Framework & Foundations" },
+  ];
+
+  const visibleCerts = showAll ? allCerts : allCerts.slice(0, 3);
+
   return (
     <div className="career-section section-container">
       <div className="career-container">
@@ -70,10 +82,14 @@ const Career = () => {
 
           {/* LARGE CERTIFICATES GRID */}
           <div className="certificates-grid">
-            <img src="/images/cert-building-with-claude.jpg" alt="Building with the Claude API" />
-            <img src="/images/cert-claude-101.jpg" alt="Claude 101" />
-            <img src="/images/cert-claude-code.jpg" alt="Claude Code" />
-            <img src="/images/cert-ai-fluency.jpg" alt="AI Fluency" />
+            {visibleCerts.map((cert) => (
+              <img key={cert.alt} src={cert.src} alt={cert.alt} />
+            ))}
+          </div>
+          <div className="certificates-view-all">
+            <button onClick={() => setShowAll(!showAll)} className="view-all-btn">
+              {showAll ? "Show less ↑" : "View all certifications →"}
+            </button>
           </div>
         </div>
       </div>
