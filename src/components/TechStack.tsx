@@ -26,10 +26,17 @@ const TechStack = () => {
   return (
     <section className="tech-section" id="tech">
       <div className="tech-intro">
-        <h2>
-          Technical <span>Arsenal</span>
-        </h2>
-        <p>The stack running behind my production apps.</p>
+        <div>
+          <h2>
+            Technical <span>Arsenal</span>
+          </h2>
+          <p>The stack running behind my production apps.</p>
+        </div>
+        <img
+          src="https://streak-stats.demolab.com/?user=SKYDARTIST&theme=dark&background=0b080c&border=ffffff15&ring=7f40ff&fire=b464ff&currStreakLabel=b464ff&sideLabels=a1a1aa&dates=71717a&hide_border=false"
+          alt="GitHub Streak"
+          className="tech-streak"
+        />
       </div>
 
       <div className="tech-marquee" aria-hidden="true">
