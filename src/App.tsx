@@ -1,23 +1,38 @@
 import { lazy, Suspense } from "react";
+import { Routes, Route } from "react-router-dom";
 import "./App.css";
 
 const CharacterModel = lazy(() => import("./components/Character"));
 const MainContainer = lazy(() => import("./components/MainContainer"));
+const Certificates = lazy(() => import("./components/Certificates"));
 import { LoadingProvider } from "./context/LoadingProvider";
 
 const App = () => {
   return (
-    <>
-      <LoadingProvider>
-        <Suspense>
-          <MainContainer>
+    <Routes>
+      <Route
+        path="/"
+        element={
+          <LoadingProvider>
             <Suspense>
-              <CharacterModel />
+              <MainContainer>
+                <Suspense>
+                  <CharacterModel />
+                </Suspense>
+              </MainContainer>
             </Suspense>
-          </MainContainer>
-        </Suspense>
-      </LoadingProvider>
-    </>
+          </LoadingProvider>
+        }
+      />
+      <Route
+        path="/certificates"
+        element={
+          <Suspense>
+            <Certificates />
+          </Suspense>
+        }
+      />
+    </Routes>
   );
 };
 

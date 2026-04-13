@@ -1,22 +1,13 @@
-import { useState } from "react";
+import { Link } from "react-router-dom";
 import "./styles/Career.css";
 
 const Career = () => {
-  const [showAll, setShowAll] = useState(false);
-
-  const allCerts = [
+  const featuredCerts = [
     { src: "/images/cert-building-with-claude.jpg", alt: "Building with the Claude API" },
     { src: "/images/cert-claude-code-101.jpg", alt: "Claude Code 101" },
-    { src: "/images/cert-cowork.jpg", alt: "Introduction to Cowork" },
-    { src: "/images/cert-claude-101.jpg", alt: "Claude 101" },
-    { src: "/images/cert-claude-code.jpg", alt: "Claude Code in Action" },
     { src: "/images/cert-ai-fluency.jpg", alt: "AI Fluency: Framework & Foundations" },
-    { src: "/images/cert-ai-capabilities.jpg", alt: "AI Capabilities & Limitations" },
-    { src: "/images/cert-subagents.jpg", alt: "Introduction to Agent Skills — Subagents" },
-    { src: "/images/cert-skills.jpg", alt: "Introduction to Agent Skills — Skills" },
+    { src: "/images/cert-claude-code.jpg", alt: "Claude Code in Action" },
   ];
-
-  const visibleCerts = showAll ? allCerts : allCerts.slice(0, 3);
 
   return (
     <div className="career-section section-container">
@@ -87,14 +78,14 @@ const Career = () => {
 
           {/* LARGE CERTIFICATES GRID */}
           <div className="certificates-grid">
-            {visibleCerts.map((cert) => (
+            {featuredCerts.map((cert) => (
               <img key={cert.alt} src={cert.src} alt={cert.alt} />
             ))}
           </div>
           <div className="certificates-view-all">
-            <button onClick={() => setShowAll(!showAll)} className="view-all-btn">
-              {showAll ? "Show less ↑" : "View all certifications →"}
-            </button>
+            <Link to="/certificates" className="view-all-btn">
+              View all certifications →
+            </Link>
           </div>
         </div>
       </div>

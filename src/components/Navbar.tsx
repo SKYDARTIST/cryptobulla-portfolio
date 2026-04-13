@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { Link } from "react-router-dom";
 import HoverLinks from "./HoverLinks";
 import { gsap } from "gsap";
 import { ScrollSmoother } from "gsap/ScrollSmoother";
@@ -61,6 +62,11 @@ const Navbar = () => {
             <a data-href="#work" href="#work">
               <HoverLinks text="WORK" />
             </a>
+          </li>
+          <li>
+            <Link to="/certificates" data-cursor="disable">
+              <HoverLinks text="CERTS" />
+            </Link>
           </li>
           <li>
             <a data-href="#contact" href="#contact">
