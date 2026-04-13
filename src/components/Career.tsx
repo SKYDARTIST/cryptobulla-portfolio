@@ -12,6 +12,8 @@ const Career = () => {
     { src: "/images/cert-claude-code.jpg", alt: "Claude Code in Action" },
     { src: "/images/cert-ai-fluency.jpg", alt: "AI Fluency: Framework & Foundations" },
     { src: "/images/cert-ai-capabilities.jpg", alt: "AI Capabilities & Limitations" },
+    { src: "/images/cert-subagents.jpg", alt: "Introduction to Agent Skills — Subagents" },
+    { src: "/images/cert-skills.jpg", alt: "Introduction to Agent Skills — Skills" },
   ];
 
   const visibleCerts = showAll ? allCerts : allCerts.slice(0, 3);
