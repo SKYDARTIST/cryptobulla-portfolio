@@ -16,8 +16,9 @@ interface LoadingType {
 export const LoadingContext = createContext<LoadingType | null>(null);
 
 export const LoadingProvider = ({ children }: PropsWithChildren) => {
-  const [isLoading, setIsLoading] = useState(true);
-  const [loading, setLoading] = useState(0);
+  const alreadyLoaded = sessionStorage.getItem("portfolioLoaded") === "true";
+  const [isLoading, setIsLoading] = useState(!alreadyLoaded);
+  const [loading, setLoading] = useState(alreadyLoaded ? 100 : 0);
 
   const value = {
     isLoading,
@@ -26,12 +27,22 @@ export const LoadingProvider = ({ children }: PropsWithChildren) => {
   };
 
   useEffect(() => {
+    if (alreadyLoaded) {
+      document.body.style.overflow = "";
+      import("../components/utils/initialFX").then((mod) => {
+        if (mod.initialFX) mod.initialFX();
+      });
+      return;
+    }
+
     document.body.style.overflow = "hidden";
 
     const { loaded, clear } = setProgress(setLoading);
 
     const finish = () => {
-      loaded();
+      loaded().then(() => {
+        sessionStorage.setItem("portfolioLoaded", "true");
+      });
     };
 
     if (document.readyState === "complete") {
