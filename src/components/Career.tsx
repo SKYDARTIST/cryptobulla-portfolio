@@ -6,7 +6,6 @@ const Career = () => {
     { src: "/images/cert-building-with-claude.jpg", alt: "Building with the Claude API" },
     { src: "/images/cert-claude-code-101.jpg", alt: "Claude Code 101" },
     { src: "/images/cert-ai-fluency.jpg", alt: "AI Fluency: Framework & Foundations" },
-    { src: "/images/cert-claude-code.jpg", alt: "Claude Code in Action" },
   ];
 
   return (
