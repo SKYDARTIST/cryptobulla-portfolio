@@ -14,10 +14,6 @@ const Contact = () => {
   return (
     <section className="contact-section" id="contact">
       <div className="contact-inner">
-        <span className="contact-badge">
-          <span className="contact-badge__dot" />
-          Available for internships
-        </span>
 
         <h2 className="contact-statement">
           Let's build <br />
@@ -35,8 +31,8 @@ const Contact = () => {
 
         <div className="contact-grid">
           <div className="contact-col">
-            <h4>Available for</h4>
-            <p>AI integrations · Mobile apps · Freelance projects</p>
+            <h4>Building</h4>
+            <p>AI-powered apps · Mobile products · Full-stack systems</p>
           </div>
 
           <div className="contact-col">
