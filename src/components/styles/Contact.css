@@ -52,10 +52,10 @@
 
 /* Big statement */
 .contact-statement {
-  font-size: 110px;
+  font-size: 70px;
   font-weight: 500;
-  line-height: 0.95;
-  letter-spacing: -2px;
+  line-height: 1.05;
+  letter-spacing: -1px;
   margin: 0 0 50px;
   color: #f4f4f5;
 }
@@ -181,7 +181,7 @@
 /* Responsive */
 @media only screen and (max-width: 1200px) {
   .contact-statement {
-    font-size: 80px;
+    font-size: 56px;
   }
   .contact-cta {
     font-size: 22px;
@@ -194,8 +194,8 @@
     padding: 80px 24px 60px;
   }
   .contact-statement {
-    font-size: 56px;
-    letter-spacing: -1px;
+    font-size: 44px;
+    letter-spacing: -0.5px;
   }
   .contact-cta {
     font-size: 18px;
@@ -221,6 +221,6 @@
 
 @media only screen and (max-width: 500px) {
   .contact-statement {
-    font-size: 42px;
+    font-size: 34px;
   }
 }
