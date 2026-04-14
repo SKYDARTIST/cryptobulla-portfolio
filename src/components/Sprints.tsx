@@ -39,6 +39,7 @@ const sprints: Sprint[] = [
     tools: "Next.js · Gemini 2.5 Flash · TypeScript · Tailwind v4",
     link: "https://cardekho-ai-advisor.vercel.app",
     live: true,
+    image: "/images/work-carmatch.png",
   },
 ];
 
