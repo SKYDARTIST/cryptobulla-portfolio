@@ -32,6 +32,14 @@ const sprints: Sprint[] = [
     image: "/images/work-drone.png",
     demoVideo: "https://drive.google.com/file/d/145JI2xWvi7Wdmp6khHZjV2Bi1_sH53LZ/view?usp=drivesdk",
   },
+  {
+    time: "48 hrs",
+    name: "CarMatch AI",
+    desc: "AI car advisor for CarDekho Group take-home. 4 lifestyle questions → Gemini shortlists 3 cars with match score, EMI estimate, and a head-to-head verdict. No spec questions — the AI maps lifestyle to specs silently.",
+    tools: "Next.js · Gemini 2.5 Flash · TypeScript · Tailwind v4",
+    link: "https://cardekho-ai-advisor.vercel.app",
+    live: true,
+  },
 ];
 
 const Sprints = () => {
