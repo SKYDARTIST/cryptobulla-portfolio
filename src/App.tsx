@@ -1,5 +1,6 @@
 import { lazy, Suspense } from "react";
 import { Routes, Route } from "react-router-dom";
+import { Analytics } from "@vercel/analytics/react";
 import "./App.css";
 
 const CharacterModel = lazy(() => import("./components/Character"));
@@ -9,6 +10,7 @@ import { LoadingProvider } from "./context/LoadingProvider";
 
 const App = () => {
   return (
+    <>
     <Routes>
       <Route
         path="/"
@@ -33,6 +35,8 @@ const App = () => {
         }
       />
     </Routes>
+    <Analytics />
+    </>
   );
 };
 
