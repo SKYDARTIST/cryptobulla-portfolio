@@ -222,6 +222,34 @@
   letter-spacing: 0.3px;
 }
 
+.sprint-card__footer-right {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.sprint-card__demo {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 11px;
+  font-weight: 600;
+  color: #f4f4f5;
+  background: rgba(255, 255, 255, 0.07);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  padding: 5px 12px;
+  border-radius: 999px;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: all 0.2s ease;
+}
+
+.sprint-card__demo:hover {
+  background: rgba(180, 100, 255, 0.15);
+  border-color: rgba(180, 100, 255, 0.5);
+  color: var(--accentColor);
+}
+
 .sprint-card__live {
   display: inline-flex;
   align-items: center;

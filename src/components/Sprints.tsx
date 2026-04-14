@@ -9,6 +9,7 @@ type Sprint = {
   link: string;
   live?: boolean;
   image?: string;
+  demoVideo?: string;
 };
 
 const sprints: Sprint[] = [
@@ -29,6 +30,7 @@ const sprints: Sprint[] = [
     link: "https://flytbase-drone-survey-three.vercel.app/",
     live: true,
     image: "/images/work-drone.png",
+    demoVideo: "https://drive.google.com/file/d/145JI2xWvi7Wdmp6khHZjV2Bi1_sH53LZ/view?usp=drivesdk",
   },
 ];
 
@@ -80,12 +82,25 @@ const Sprints = () => {
 
               <div className="sprint-card__footer">
                 <span className="sprint-card__tools">{sprint.tools}</span>
-                {sprint.live && (
-                  <span className="sprint-card__live">
-                    <span className="sprint-card__live-dot" />
-                    Live
-                  </span>
-                )}
+                <div className="sprint-card__footer-right">
+                  {sprint.live && (
+                    <span className="sprint-card__live">
+                      <span className="sprint-card__live-dot" />
+                      Live
+                    </span>
+                  )}
+                  {sprint.demoVideo && (
+                    <a
+                      href={sprint.demoVideo}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="sprint-card__demo"
+                      onClick={(e) => e.stopPropagation()}
+                    >
+                      ▶ Demo
+                    </a>
+                  )}
+                </div>
               </div>
             </a>
           ))}

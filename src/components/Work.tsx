@@ -12,6 +12,7 @@ type Project = {
   accent?: string;
   image?: string;
   gradient?: string;
+  demoVideo?: string;
 };
 
 const projects: Project[] = [
@@ -25,6 +26,7 @@ const projects: Project[] = [
     size: "lg",
     accent: "800+ installs · 11 paid lifetime sales · 5★",
     image: "/images/work-antigravity.png",
+    demoVideo: "https://drive.google.com/file/d/1NRlvMLsLzVk7_dEa2TiDYkyF-QOhaakx/view?usp=drivesdk",
   },
   {
     number: "02",
@@ -125,7 +127,20 @@ const Work = () => {
                   )}
                 </div>
 
-                <p className="work-card__tools">{project.tools}</p>
+                <div className="work-card__footer">
+                  <p className="work-card__tools">{project.tools}</p>
+                  {project.demoVideo && (
+                    <a
+                      href={project.demoVideo}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="work-card__demo"
+                      onClick={(e) => e.stopPropagation()}
+                    >
+                      ▶ Watch Demo
+                    </a>
+                  )}
+                </div>
               </div>
             </a>
           ))}
