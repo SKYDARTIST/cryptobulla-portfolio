@@ -46,7 +46,7 @@ const projects: Project[] = [
     link: "https://career-pilot-ai-psi.vercel.app/",
     desc: "Autonomous pipeline: scrapes jobs, filters noise, ranks matches.",
     size: "md",
-    image: "/images/work-careerpilot.png",
+    image: "/images/career-pilot.png",
   },
   {
     number: "04",
