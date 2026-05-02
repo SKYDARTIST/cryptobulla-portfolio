@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import "./styles/Certificates.css";
 
 const allCerts = [
+  { src: "/images/cert-python-bootcamp.jpg", alt: "The Ultimate Python Bootcamp: 50 Projects" },
   { src: "/images/cert-building-with-claude.jpg", alt: "Building with the Claude API" },
   { src: "/images/cert-claude-code-101.jpg", alt: "Claude Code 101" },
   { src: "/images/cert-claude-code.jpg", alt: "Claude Code in Action" },
@@ -32,12 +33,12 @@ const Certificates = () => {
 
       <div className="certs-content">
         <h1>
-          Anthropic <span>&</span>
+          Courses <span>&</span>
           <br /> Certifications
         </h1>
         <p className="certs-subtitle">
-          Formally certified by the lab behind Claude — covering AI foundations,
-          applied engineering, and agentic system design.
+          Certified by Anthropic and Udemy — covering Python engineering, AI foundations,
+          applied Claude development, and agentic system design.
         </p>
 
         <div className="certs-grid">
