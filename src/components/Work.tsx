@@ -1,3 +1,4 @@
+import { useState } from "react";
 import "./styles/Work.css";
 import { MdArrowOutward } from "react-icons/md";
 
@@ -13,6 +14,8 @@ type Project = {
   image?: string;
   gradient?: string;
   demoVideo?: string;
+  videoId?: string;
+  githubLink?: string;
 };
 
 const projects: Project[] = [
@@ -30,6 +33,19 @@ const projects: Project[] = [
   },
   {
     number: "02",
+    name: "AEO-Pixii",
+    category: "AI Tool / 48hr Build",
+    tools: "Next.js · Gemini 2.5 Flash · SerpAPI · Vercel",
+    link: "https://aeo-pixii.vercel.app",
+    desc: "AI Engine Optimization diagnostic for Amazon sellers. Type a buyer query — see which competitors AI recommends and exactly why. Get fix recommendations in 30 seconds.",
+    size: "lg",
+    accent: "Built in 48 hrs · Submitted as take-home assessment",
+    image: "/images/aeo-pixii.png",
+    videoId: "cJbJvRsrQLM",
+    githubLink: "https://github.com/SKYDARTIST/AEO-Pixii",
+  },
+  {
+    number: "03",
     name: "MindMint",
     category: "Web App / AI",
     tools: "Next.js · Firebase · Gemini · TypeScript",
@@ -39,7 +55,7 @@ const projects: Project[] = [
     image: "/images/work-mindmint.png",
   },
   {
-    number: "03",
+    number: "04",
     name: "CareerPilot AI",
     category: "AI Agent / Automation",
     tools: "Next.js · n8n · Gemini · Claude API",
@@ -49,7 +65,7 @@ const projects: Project[] = [
     image: "/images/career-pilot.png",
   },
   {
-    number: "04",
+    number: "05",
     name: "Nexus",
     category: "EdTech / Full Stack",
     tools: "Next.js · Supabase · JWT · Tailwind",
@@ -59,7 +75,7 @@ const projects: Project[] = [
     image: "/images/work-nexus.png",
   },
   {
-    number: "05",
+    number: "06",
     name: "BasedFolio",
     category: "Web3 / Farcaster",
     tools: "Next.js · Farcaster SDK · Base",
@@ -69,7 +85,7 @@ const projects: Project[] = [
     gradient: "linear-gradient(135deg, rgba(0, 82, 255, 0.15) 0%, rgba(0, 180, 255, 0.08) 100%)",
   },
   {
-    number: "06",
+    number: "07",
     name: "Nexus Dashboard",
     category: "Analytics / Internal",
     tools: "React · Supabase · Real-time",
@@ -81,6 +97,8 @@ const projects: Project[] = [
 ];
 
 const Work = () => {
+  const [activeVideoId, setActiveVideoId] = useState<string | null>(null);
+
   return (
     <section className="work-section" id="work">
       <div className="work-container section-container">
@@ -129,23 +147,73 @@ const Work = () => {
 
                 <div className="work-card__footer">
                   <p className="work-card__tools">{project.tools}</p>
-                  {project.demoVideo && (
-                    <a
-                      href={project.demoVideo}
-                      target="_blank"
-                      rel="noreferrer"
-                      className="work-card__demo"
-                      onClick={(e) => e.stopPropagation()}
-                    >
-                      ▶ Watch Demo
-                    </a>
-                  )}
+                  <div className="work-card__footer-actions">
+                    {project.githubLink && (
+                      <a
+                        href={project.githubLink}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="work-card__github"
+                        onClick={(e) => e.stopPropagation()}
+                      >
+                        GitHub
+                      </a>
+                    )}
+                    {project.demoVideo && (
+                      <a
+                        href={project.demoVideo}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="work-card__demo"
+                        onClick={(e) => e.stopPropagation()}
+                      >
+                        ▶ Watch Demo
+                      </a>
+                    )}
+                    {project.videoId && (
+                      <button
+                        className="work-card__demo"
+                        onClick={(e) => {
+                          e.preventDefault();
+                          e.stopPropagation();
+                          setActiveVideoId(project.videoId!);
+                        }}
+                      >
+                        ▶ Watch Demo
+                      </button>
+                    )}
+                  </div>
                 </div>
               </div>
             </a>
           ))}
         </div>
       </div>
+
+      {activeVideoId && (
+        <div
+          className="video-modal-overlay"
+          onClick={() => setActiveVideoId(null)}
+        >
+          <div
+            className="video-modal-content"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <button
+              className="video-modal-close"
+              onClick={() => setActiveVideoId(null)}
+            >
+              ✕
+            </button>
+            <iframe
+              src={`https://www.youtube.com/embed/${activeVideoId}?autoplay=1`}
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+              className="video-modal-iframe"
+            />
+          </div>
+        </div>
+      )}
     </section>
   );
 };
