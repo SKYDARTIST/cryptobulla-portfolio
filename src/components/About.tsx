@@ -6,7 +6,7 @@ const About = () => {
       <div className="about-me">
         <h3 className="title">About Me</h3>
         <p className="para">
-          Self-taught AI developer. Shipped 6 production products in 6 months. I
+          Self-taught AI developer. Shipped 10+ apps in 9 months. I
           didn't learn to build from courses — I started building first, fixed
           bugs, and shipped.
           <br />
@@ -25,8 +25,8 @@ const About = () => {
             PDF Editor & AI: Anti-Gravity
           </a>
           , is live on the Play Store. Built solo using React, Capacitor,
-          Supabase, and Gemini API. Currently sitting at 800+ installs, 11 paid
-          sales (US/EU/IN), and a 5★ rating. I care about solving real problems:
+          Supabase, and Gemini API. Currently sitting at 1000+ installs, 13 paid
+          sales across 6 countries (USA, France, Germany, Turkey, India, Malaysia), and a 5★ rating. I care about solving real problems:
           No ads, no monthly subscriptions, zero-trust security.
           <br />
           <br />

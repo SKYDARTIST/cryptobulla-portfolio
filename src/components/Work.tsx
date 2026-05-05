@@ -27,7 +27,7 @@ const projects: Project[] = [
     link: "https://play.google.com/store/apps/details?id=com.cryptobulla.antigravity",
     desc: "Private AI PDF on the Play Store.",
     size: "lg",
-    accent: "800+ installs · 11 paid lifetime sales · 5★",
+    accent: "1000+ installs · 13 sales · USA · France · Germany · Turkey · India · Malaysia · 5★",
     image: "/images/work-antigravity.png",
     demoVideo: "https://drive.google.com/file/d/1NRlvMLsLzVk7_dEa2TiDYkyF-QOhaakx/view?usp=drivesdk",
   },
@@ -51,7 +51,7 @@ const projects: Project[] = [
     tools: "Next.js · Firebase · Gemini · TypeScript",
     link: "https://mindmint.study",
     desc: "AI study tool — text → mindmaps, quizzes, flashcards.",
-    size: "lg",
+    size: "md",
     image: "/images/work-mindmint.png",
   },
   {
@@ -81,18 +81,8 @@ const projects: Project[] = [
     tools: "Next.js · Farcaster SDK · Base",
     link: "https://farcaster.xyz/miniapps/4pZg_YnPhRUi/basedfolio",
     desc: "Onboarding mini-app for the Base ecosystem.",
-    size: "sm",
-    gradient: "linear-gradient(135deg, rgba(0, 82, 255, 0.15) 0%, rgba(0, 180, 255, 0.08) 100%)",
-  },
-  {
-    number: "07",
-    name: "Nexus Dashboard",
-    category: "Analytics / Internal",
-    tools: "React · Supabase · Real-time",
-    link: "#",
-    desc: "Custom admin tool. Found a 100% billing failure bug with it.",
-    size: "sm",
-    gradient: "linear-gradient(135deg, rgba(127, 64, 255, 0.15) 0%, rgba(180, 100, 255, 0.06) 100%)",
+    size: "md",
+    image: "/images/work-basedfolio.png",
   },
 ];
 
@@ -133,6 +123,22 @@ const Work = () => {
               <div className="work-card__content">
                 <div className="work-card__top">
                   <span className="work-card__num">{project.number}</span>
+                  {project.videoId && (
+                    <button
+                      className="work-card__video-thumb"
+                      onClick={(e) => {
+                        e.preventDefault();
+                        e.stopPropagation();
+                        setActiveVideoId(project.videoId!);
+                      }}
+                    >
+                      <img
+                        src={`https://img.youtube.com/vi/${project.videoId}/maxresdefault.jpg`}
+                        alt="Watch demo"
+                      />
+                      <span className="work-card__video-thumb-play">▶</span>
+                    </button>
+                  )}
                   <MdArrowOutward className="work-card__arrow" />
                 </div>
 
