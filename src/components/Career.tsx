@@ -4,7 +4,7 @@ import "./styles/Career.css";
 const Career = () => {
   const featuredCerts = [
     { src: "/images/cert-python-bootcamp.jpg", alt: "The Ultimate Python Bootcamp: 50 Projects" },
-    { src: "/images/cert-building-with-claude.jpg", alt: "Building with the Claude API" },
+    { src: "/images/cert-ai-agent.jpg", alt: "Agentic System Workflows" },
     { src: "/images/cert-claude-code-101.jpg", alt: "Claude Code 101" },
   ];
 

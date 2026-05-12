@@ -4,6 +4,7 @@ import "./styles/Certificates.css";
 
 const allCerts = [
   { src: "/images/cert-python-bootcamp.jpg", alt: "The Ultimate Python Bootcamp: 50 Projects" },
+  { src: "/images/cert-ai-agent.jpg", alt: "Agentic System Workflows" },
   { src: "/images/cert-building-with-claude.jpg", alt: "Building with the Claude API" },
   { src: "/images/cert-claude-code-101.jpg", alt: "Claude Code 101" },
   { src: "/images/cert-claude-code.jpg", alt: "Claude Code in Action" },
