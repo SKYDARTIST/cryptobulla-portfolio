@@ -14,13 +14,13 @@ type Sprint = {
 
 const sprints: Sprint[] = [
   {
-    time: "2 hrs",
-    name: "LLM Comparator",
-    desc: "Compare outputs across multiple LLMs side-by-side in real time. Built during a live timed technical trial.",
-    tools: "React · Vite · Vercel",
-    link: "https://llm-comparator.vercel.app",
+    time: "24 hrs",
+    name: "AI Mail — Universal Email Client",
+    desc: "Gmail OAuth live — real inbox, send, reply, archive with conversation threading. Office 365 and IMAP adapters behind the same provider interface. AI triage + Gemini summaries. Built with multi-agent Claude Code workflow for a Senior AI Agentic Systems Engineer take-home.",
+    tools: "Next.js · NextAuth · Gmail API · Gemini AI · Supabase · TypeScript",
+    link: "https://ai-email-client-aakash.vercel.app",
     live: true,
-    image: "/images/work-llm.png",
+    image: "/images/work-ai-mail.png",
   },
   {
     time: "48 hrs",
@@ -40,6 +40,15 @@ const sprints: Sprint[] = [
     link: "https://cardekho-ai-advisor.vercel.app",
     live: true,
     image: "/images/work-carmatch.png",
+  },
+  {
+    time: "2 hrs",
+    name: "LLM Comparator",
+    desc: "Compare outputs across multiple LLMs side-by-side in real time. Built during a live timed technical trial.",
+    tools: "React · Vite · Vercel",
+    link: "https://llm-comparator.vercel.app",
+    live: true,
+    image: "/images/work-llm.png",
   },
 ];
 
