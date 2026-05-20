@@ -52,7 +52,7 @@ const projects: Project[] = [
     link: "https://github.com/SKYDARTIST/Linkedin-DM",
     desc: "6-workflow LinkedIn outreach system. Sends connection requests, follows up with 3-stage messages at 48h intervals, detects replies via webhook, withdraws unaccepted invites after 7 days.",
     size: "md",
-    accent: "Built in 1 day · Submitted as paid technical assessment",
+    accent: "Built in 1 day · n8n + Unipile + Google Sheets",
     image: "/images/linkedin-dm.png",
     githubLink: "https://github.com/SKYDARTIST/Linkedin-DM",
   },
