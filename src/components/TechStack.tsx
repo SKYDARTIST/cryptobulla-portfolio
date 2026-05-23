@@ -8,18 +8,29 @@ const rowOne = [
   "Node.js",
   "Python",
   "Tailwind CSS",
-  "Vite",
+  "Supabase",
 ];
 
 const rowTwo = [
+  "n8n",
   "Gemini API",
   "Claude API",
-  "Supabase",
-  "Firebase",
-  "PostgreSQL",
-  "n8n",
+  "REST APIs",
+  "Webhooks",
+  "Google Sheets API",
+  "Gmail API",
+  "Playwright",
+];
+
+const rowThree = [
   "Google Play Billing",
-  "Web3 / Solana",
+  "Play Integrity",
+  "HMAC Validation",
+  "NextAuth",
+  "PostgreSQL",
+  "Firebase",
+  "Vercel",
+  "GitHub Actions",
 ];
 
 const TechStack = () => {
@@ -51,6 +62,14 @@ const TechStack = () => {
         <div className="tech-marquee__track tech-marquee__track--rtl">
           {[...rowTwo, ...rowTwo].map((item, i) => (
             <span key={`r2-${i}`} className="tech-chip tech-chip--alt">
+              {item}
+            </span>
+          ))}
+        </div>
+
+        <div className="tech-marquee__track tech-marquee__track--ltr2">
+          {[...rowThree, ...rowThree].map((item, i) => (
+            <span key={`r3-${i}`} className="tech-chip tech-chip--prod">
               {item}
             </span>
           ))}

@@ -6,9 +6,9 @@ const About = () => {
       <div className="about-me">
         <h3 className="title">About Me</h3>
         <p className="para">
-          Self-taught AI developer. Shipped 10+ apps in 9 months. I
-          didn't learn to build from courses — I started building first, fixed
-          bugs, and shipped.
+          Self-taught AI, mobile, and workflow automation developer. I build
+          production apps, internal tools, and automation systems using React,
+          Capacitor, Supabase, n8n, APIs, webhooks, and AI models.
           <br />
           <br />
           My primary app,{" "}
@@ -24,16 +24,18 @@ const About = () => {
           >
             PDF Editor & AI: Anti-Gravity
           </a>
-          , is live on the Play Store. Built solo using React, Capacitor,
-          Supabase, and Gemini API. Currently sitting at 1000+ installs, 13 paid
-          sales across 6 countries (USA, France, Germany, Turkey, India, Malaysia), and a 5★ rating. I care about solving real problems:
-          No ads, no monthly subscriptions, zero-trust security.
+          , is live on the Play Store with 1200+ installs, 14 paid lifetime
+          sales across 7 countries, and a 5★ rating. I built it solo with React,
+          Capacitor, Supabase, Gemini API, Google Play Billing, HMAC validation,
+          and Play Integrity.
           <br />
           <br />
-          I code with a strong bias towards execution and real metrics. I use
-          Claude Code and agentic AI-assisted workflows daily. I am also
-          Anthropic certified in Claude 101, Claude Code in Action, and AI
-          Fluency.
+          I also build automation systems around real workflows: job discovery
+          agents, inbox workflows, LinkedIn outreach pipelines, API
+          orchestration, Google Sheets-based operations, webhook handling, and
+          AI-assisted reporting. My focus is practical shipping: secure flows,
+          clear metrics, fast iteration, and products that solve real user
+          problems.
         </p>
       </div>
     </div>

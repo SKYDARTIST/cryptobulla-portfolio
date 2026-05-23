@@ -12,8 +12,8 @@ const Career = () => {
     <div className="career-section section-container">
       <div className="career-container">
         <h2>
-          Hard Problems <span>&</span>
-          <br /> Mindset
+          Hard Problems, <span>Automation</span>
+          <br /> & Proof
         </h2>
         <div className="career-info">
           <div className="career-timeline">
@@ -29,10 +29,10 @@ const Career = () => {
               <h3>DEBUG</h3>
             </div>
             <p>
-              Users were paying but not getting premium access. I debugged the entire 5-layer billing stack spanning Google Play to Supabase, and found my rate limiter was configured to fail-secure, silently blocking verification calls. Restructured to fail-open. True success rate went from 0% to 99.9% overnight.
+              Users were paying but not getting premium access. I traced the full Google Play → Supabase billing flow and found verification calls were being blocked by fail-secure rate limiting. Restructured the flow and restored premium grants.
             </p>
           </div>
-          
+
           {/* HARD PROBLEM 2 */}
           <div className="career-info-box">
             <div className="career-info-in">
@@ -43,21 +43,35 @@ const Career = () => {
               <h3>OAUTH</h3>
             </div>
             <p>
-              Paid users lost access when linking Google sign-in due to a state mismatch between local storage and the remote database. Built a background handshake reconciliation step that settles the correct purchase tier before the UI ever mounts.
+              Paid users lost access after linking Google sign-in because local state and database state were out of sync. Built a reconciliation step that resolves the correct purchase tier before the app UI mounts.
             </p>
           </div>
 
-          {/* BUILDER PHILOSOPHY */}
+          {/* AUTOMATION */}
           <div className="career-info-box">
             <div className="career-info-in">
               <div className="career-role">
-                <h4>Leverage Over Labor</h4>
-                <h5>Builder Philosophy</h5>
+                <h4>LinkedIn Outreach Workflow</h4>
+                <h5>Automation System</h5>
               </div>
-              <h3>MINDSET</h3>
+              <h3>N8N</h3>
             </div>
             <p>
-              Code is just a tool, not the end goal. I use Claude and agentic workflows to accelerate development by 10x, leaving my human energy for the things that matter: product strategy, protecting user privacy, and solving genuine market problems.
+              Built a 6-workflow automation system for campaign setup, connection sending, acceptance polling, DM follow-ups, reply tracking, sender limits, failure logging, and daily reset logic.
+            </p>
+          </div>
+
+          {/* AI AGENT */}
+          <div className="career-info-box">
+            <div className="career-info-in">
+              <div className="career-role">
+                <h4>AI Job Discovery Agent</h4>
+                <h5>CareerPilot AI</h5>
+              </div>
+              <h3>AGENT</h3>
+            </div>
+            <p>
+              Built an automated job discovery pipeline using SerpAPI, Gemini scoring, culture analysis, resume tailoring, cover-letter generation, Supabase storage, and a Next.js dashboard.
             </p>
           </div>
 
@@ -71,7 +85,7 @@ const Career = () => {
               <h3>2026</h3>
             </div>
             <p>
-              Formally certified directly by the lab behind Claude in Advanced Tool Use, Agentic System Workflows, and Applied Prompt Architecture. Proof of work over credentials, but knowing the foundation matters.
+              Certified in Claude, Claude Code, AI Fluency, tool use, agentic workflows, and prompt architecture. I use these foundations daily to build practical AI-assisted products and automations.
             </p>
           </div>
 

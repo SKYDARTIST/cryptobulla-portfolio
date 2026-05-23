@@ -97,6 +97,10 @@
   animation: marquee-rtl 45s linear infinite;
 }
 
+.tech-marquee__track--ltr2 {
+  animation: marquee-ltr 50s linear infinite;
+}
+
 @keyframes marquee-ltr {
   from {
     transform: translateX(0);
@@ -137,6 +141,12 @@
   background: rgba(127, 64, 255, 0.08);
   border-color: rgba(180, 100, 255, 0.25);
   color: #e9d5ff;
+}
+
+.tech-chip--prod {
+  background: rgba(255, 255, 255, 0.03);
+  border-color: rgba(255, 255, 255, 0.1);
+  color: #a1a1aa;
 }
 
 /* Pause on hover */

@@ -2,12 +2,13 @@ import { MdArrowOutward, MdCopyright } from "react-icons/md";
 import "./styles/Contact.css";
 
 const socials = [
-  { label: "Github", href: "https://github.com/SKYDARTIST" },
-  { label: "Twitter / X", href: "https://x.com/AakashBuild" },
+  { label: "LinkedIn", href: "https://www.linkedin.com/in/akash-g-4a5307304/" },
+  { label: "GitHub", href: "https://github.com/SKYDARTIST" },
   {
     label: "Play Store",
     href: "https://play.google.com/store/apps/details?id=com.cryptobulla.antigravity",
   },
+  { label: "Twitter / X", href: "https://x.com/AakashBuild" },
 ];
 
 const Contact = () => {
@@ -32,7 +33,7 @@ const Contact = () => {
         <div className="contact-grid">
           <div className="contact-col">
             <h4>Building</h4>
-            <p>AI-powered apps · Mobile products · Full-stack systems</p>
+            <p>AI apps · Mobile products · Automations · Internal tools</p>
           </div>
 
           <div className="contact-col">
