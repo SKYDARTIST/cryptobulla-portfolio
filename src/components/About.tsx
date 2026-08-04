@@ -6,9 +6,9 @@ const About = () => {
       <div className="about-me">
         <h3 className="title">About Me</h3>
         <p className="para">
-          Self-taught AI, mobile, and workflow automation developer. I build
-          production apps, internal tools, and automation systems using React,
-          Capacitor, Supabase, n8n, APIs, webhooks, and AI models.
+          Self-taught AI automation and growth engineer. I build automation
+          systems, AI agents, and production apps using n8n, APIs, webhooks, AI
+          models, React, Next.js, and Supabase.
           <br />
           <br />
           My primary app,{" "}
@@ -24,7 +24,7 @@ const About = () => {
           >
             PDF Editor & AI: Anti-Gravity
           </a>
-          , is live on the Play Store with 1200+ installs, 14 paid lifetime
+          , is live on the Play Store with 1800+ installs, 16 paid lifetime
           sales across 7 countries, and a 5★ rating. I built it solo with React,
           Capacitor, Supabase, Gemini API, Google Play Billing, HMAC validation,
           and Play Integrity.

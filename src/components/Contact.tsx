@@ -33,7 +33,7 @@ const Contact = () => {
         <div className="contact-grid">
           <div className="contact-col">
             <h4>Building</h4>
-            <p>AI apps · Mobile products · Automations · Internal tools</p>
+            <p>Automation · AI agents · Growth systems · AI products</p>
           </div>
 
           <div className="contact-col">

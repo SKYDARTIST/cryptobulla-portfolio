@@ -1,36 +1,36 @@
 import "./styles/TechStack.css";
 
 const rowOne = [
-  "React",
-  "TypeScript",
-  "Next.js",
-  "Capacitor",
-  "Node.js",
-  "Python",
-  "Tailwind CSS",
-  "Supabase",
+  "n8n",
+  "Workflow Automation",
+  "AI Agents",
+  "Claude API",
+  "Gemini API",
+  "Prompt Engineering",
+  "REST APIs",
+  "Webhooks",
 ];
 
 const rowTwo = [
-  "n8n",
-  "Gemini API",
-  "Claude API",
-  "REST APIs",
-  "Webhooks",
+  "Lead Scoring",
+  "Outbound Automation",
+  "Data Enrichment",
+  "AEO",
+  "SEO",
   "Google Sheets API",
   "Gmail API",
   "Playwright",
 ];
 
 const rowThree = [
-  "Google Play Billing",
-  "Play Integrity",
-  "HMAC Validation",
-  "NextAuth",
-  "PostgreSQL",
-  "Firebase",
+  "TypeScript",
+  "JavaScript",
+  "Python",
+  "React",
+  "Next.js",
+  "Node.js",
+  "Supabase",
   "Vercel",
-  "GitHub Actions",
 ];
 
 const TechStack = () => {

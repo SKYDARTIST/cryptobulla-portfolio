@@ -54,7 +54,7 @@ const Loading = ({ percent }: { percent: number }) => {
         <div className={`loader-name${done ? " loader-name--done" : ""}`}>
           <span>A</span><span>A</span><span>K</span><span>A</span><span>S</span><span>H</span>
         </div>
-        <div className="loader-role">AI Product Builder</div>
+        <div className="loader-role">AI Automation &amp; Growth Engineer</div>
       </div>
 
       {/* Bottom progress */}

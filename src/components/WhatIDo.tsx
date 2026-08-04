@@ -88,11 +88,11 @@ const WhatIDo = () => {
 
             <div className="what-content-in">
               <h3>BUILD</h3>
-              <h4>AI & Mobile Development</h4>
+              <h4>AI Products & Apps</h4>
               <p>
-                Started coding in late 2024. Built Anti-Gravity from scratch —
-                React + Capacitor, live on Play Store. Now building AI-powered
-                tools and shipping real products.
+                Started building in late 2024. Shipped Anti-Gravity solo, live
+                on the Play Store with real paying users. I build AI-powered
+                tools end to end and get them into people's hands.
               </p>
               <h5>Skillset & tools</h5>
               <div className="what-content-flex">
@@ -128,22 +128,22 @@ const WhatIDo = () => {
             </div>
             <div className="what-corner"></div>
             <div className="what-content-in">
-              <h3>ARCHITECT</h3>
-              <h4>AI Systems & Automation</h4>
+              <h3>AUTOMATE</h3>
+              <h4>Automation & Growth Systems</h4>
               <p>
-                Designing agentic pipelines, zero-trust auth, and production AI
-                workflows. Moving from "AI user" to "AI engineer" — building
-                systems that reason and act.
+                I build automation and AI agents that reason and act: outbound
+                and lead-scoring pipelines, enrichment, inbox and API workflows,
+                and growth systems that run hands-off.
               </p>
               <h5>Skillset & tools</h5>
               <div className="what-content-flex">
                 <div className="what-tags">n8n</div>
-                <div className="what-tags">Firebase</div>
-                <div className="what-tags">Google Play</div>
-                <div className="what-tags">Agentic AI</div>
-                <div className="what-tags">MCP Servers</div>
-                <div className="what-tags">Web3</div>
-                <div className="what-tags">PostgreSQL</div>
+                <div className="what-tags">Workflow Automation</div>
+                <div className="what-tags">AI Agents</div>
+                <div className="what-tags">Lead Scoring</div>
+                <div className="what-tags">Enrichment</div>
+                <div className="what-tags">APIs & Webhooks</div>
+                <div className="what-tags">AEO / SEO</div>
                 <div className="what-tags">Prompt Eng.</div>
               </div>
               <div className="what-arrow"></div>

@@ -9,7 +9,7 @@ const Scene = () => {
           <div className="character-avatar-wrap">
             <img
               src="/images/aakash_hero.png"
-              alt="Aakash - AI & Mobile Developer"
+              alt="Aakash - AI Automation & Growth Engineer"
               className="character-avatar-img"
             />
           </div>
