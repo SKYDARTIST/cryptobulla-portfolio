@@ -27,7 +27,7 @@ const projects: Project[] = [
     link: "https://play.google.com/store/apps/details?id=com.cryptobulla.antigravity",
     desc: "Private AI PDF on the Play Store.",
     size: "lg",
-    accent: "1800+ installs · 16 paid sales · 7 countries · 5★",
+    accent: "1900+ installs · 18 paid sales · 9 countries · 5★",
     image: "/images/work-antigravity.png",
     demoVideo: "https://drive.google.com/file/d/1NRlvMLsLzVk7_dEa2TiDYkyF-QOhaakx/view?usp=drivesdk",
   },
