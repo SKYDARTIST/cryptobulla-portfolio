@@ -75,6 +75,20 @@ const Career = () => {
             </p>
           </div>
 
+          {/* LLM EVALUATION */}
+          <div className="career-info-box">
+            <div className="career-info-in">
+              <div className="career-role">
+                <h4>Candidate Pre-screen LLM Evaluation</h4>
+                <h5>Private Python Evaluation Project</h5>
+              </div>
+              <h3>EVALS</h3>
+            </div>
+            <p>
+              Built a 25-case human-reviewed benchmark with deterministic field-level grading, structured Gemini outputs, regression checks, and token, latency, and cost tracking. The full v3 benchmark ran across all 25 cases; later prompt work remains explicitly quota-limited and partial.
+            </p>
+          </div>
+
           {/* CERTIFICATIONS */}
           <div className="career-info-box">
             <div className="career-info-in">

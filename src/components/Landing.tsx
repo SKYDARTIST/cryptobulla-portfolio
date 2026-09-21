@@ -13,18 +13,18 @@ const Landing = ({ children }: PropsWithChildren) => {
               className={`status-badge ${roleOpen ? "status-badge-open" : ""}`}
               onClick={() => setRoleOpen((open) => !open)}
               aria-expanded={roleOpen}
-              aria-label="Current role: AI Operator at F5 Hiring Solutions. Click for details."
+              aria-label="Current role: AI Operations at F5 Hiring Solutions. Click for details."
             >
               <span className="status-badge-row">
                 <span className="status-dot"></span>
                 <span className="status-badge-role">
-                  AI Operator · F5 Hiring Solutions
+                  AI Operations · F5 Hiring Solutions
                 </span>
                 <span className="status-badge-caret">{roleOpen ? "−" : "+"}</span>
               </span>
               <span className="status-badge-message">
-                Aakash — AI Product Developer, building AI products &amp;
-                automations at F5 Hiring Solutions.
+                Aakash — building internal systems and AI workflows at F5
+                Hiring Solutions.
               </span>
             </button>
             <h2>Hello! I'm</h2>
@@ -33,7 +33,7 @@ const Landing = ({ children }: PropsWithChildren) => {
           <div className="landing-info">
             <h3>AI-Native</h3>
             <h2 className="landing-title-clean">
-              Automation & Growth Engineer
+              Product &amp; Automation Engineer
             </h2>
           </div>
         </div>

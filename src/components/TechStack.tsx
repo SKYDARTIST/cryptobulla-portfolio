@@ -6,12 +6,13 @@ const rowOne = [
   "AI Agents",
   "Claude API",
   "Gemini API",
-  "Prompt Engineering",
+  "LLM Evaluation",
   "REST APIs",
   "Webhooks",
 ];
 
 const rowTwo = [
+  "Structured Outputs",
   "Lead Scoring",
   "Outbound Automation",
   "Data Enrichment",
