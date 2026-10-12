@@ -391,7 +391,7 @@ h2.landing-info-h2 {
   }
 }
 
-/* ── Current role status badge (F5 Hiring Solutions) ───────────── */
+/* Current role status badge */
 .status-badge {
   display: inline-flex;
   flex-direction: column;

@@ -1,6 +1,6 @@
-# Aakash — AI & Mobile Developer Portfolio
+# Aakash Gajbhiye — Product & Automation Portfolio
 
-Personal portfolio built to show real shipped products, hard problems solved, and proof of execution speed.
+Personal portfolio for my shipped apps, automation work, and technical projects. I currently work as an AI Automation Engineer (Growth Systems) at Revenue Optics. Previously, I worked in AI & Digital Operations at F5 Hiring Solutions (June–October 2026).
 
 Live: [aakashbuild.vercel.app](https://aakashbuild.vercel.app)
 
@@ -14,12 +14,14 @@ React · TypeScript · GSAP · Three.js · WebGL · Vite · CSS
 
 ## Projects Featured
 
-- **Anti-Gravity: Private AI PDF** — Android app, Play Store, 800+ installs, 11 paid sales, 5★
-- **MindMint** — AI study tool (mindmaps, quizzes, flashcards)
-- **CareerPilot AI** — Autonomous job discovery pipeline
-- **SignalVane** — AI narrative detection for Solana
-- **LLM Comparator** — Built in 2 hours during a live technical trial
-- **Drone Management Dashboard** — Built in 48 hours as a timed assessment
+- **Anti-Gravity: Private AI PDF** — Android app on Google Play; 2200+ installs (updated October 2026). Last recorded: 22 paid sales across 11+ countries.
+- **AEO-Pixii** — AI search visibility diagnostic built for a take-home assessment.
+- **LinkedIn DM Automation** — n8n-based outreach workflow with reply handling and sender limits.
+- **CareerPilot AI** — Job discovery and application-draft pipeline.
+- **Nexus** — Student and mentor workflow dashboard.
+- **MindMint** — AI study tool for mindmaps, quizzes, and flashcards.
+
+The portfolio also describes a private candidate pre-screen LLM evaluation project. The full v3 run covered 25/25 cases; the v4 run stopped at 11/25 due to quota and is not a full benchmark comparison. Its repository is private.
 
 ---
 

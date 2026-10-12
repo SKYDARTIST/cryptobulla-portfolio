@@ -24,8 +24,8 @@ const About = () => {
           >
             PDF Editor & AI: Anti-Gravity
           </a>
-          , is live on the Play Store with 2000+ installs, 20 paid lifetime
-          users across 10 countries, and a 5★ rating. I built it solo with React,
+          , is live on the Play Store with 2200+ installs, 22 paid lifetime
+          users across at least 11 countries, and a 5★ rating. I built it solo with React,
           Capacitor, Supabase, Gemini API, Google Play Billing, HMAC validation,
           and Play Integrity.
           <br />
