@@ -14,7 +14,7 @@ React · TypeScript · GSAP · Three.js · WebGL · Vite · CSS
 
 ## Projects Featured
 
-- **Anti-Gravity: Private AI PDF** — Android app on Google Play; 2200+ installs (updated October 2026). Last recorded: 22 paid sales across 11+ countries.
+- **Anti-Gravity: Private AI PDF** — Android app on Google Play; 2300+ installs and 24 paid lifetime sales across 11 countries (reported by Aakash, November 2, 2026; not independently checked against Play Console).
 - **AEO-Pixii** — AI search visibility diagnostic built for a take-home assessment.
 - **LinkedIn DM Automation** — n8n-based outreach workflow with reply handling and sender limits.
 - **CareerPilot AI** — Job discovery and application-draft pipeline.
