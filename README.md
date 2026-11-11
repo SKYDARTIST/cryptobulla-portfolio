@@ -1,6 +1,6 @@
 # Aakash Gajbhiye — Product & Automation Portfolio
 
-Personal portfolio for my shipped apps, automation work, and technical projects. I currently work as an AI Automation Engineer (Growth Systems) at Revenue Optics. Previously, I worked in AI & Digital Operations at F5 Hiring Solutions (June–October 2026).
+Personal portfolio for my shipped apps, automation work, and technical projects. My experience includes AI & Digital Operations at F5 Hiring Solutions (June–October 2026), alongside independently built AI products and workflow integrations.
 
 Live: [aakashbuild.vercel.app](https://aakashbuild.vercel.app)
 

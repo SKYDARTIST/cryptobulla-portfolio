@@ -70,11 +70,11 @@ const SocialIcons = () => {
       </div>
       <a
         className="resume-button"
-        href="https://aakashbuild.vercel.app"
+        href="/resume.pdf"
         target="_blank"
         data-cursor="disable"
       >
-        <HoverLinks text="PORTFOLIO" />
+        <HoverLinks text="RESUME" />
         <span>
           <TbNotes />
         </span>
